@@ -8,7 +8,6 @@
 #include "net/netdev/lora.h"
 #include "sx127x_internal.h"
 #include "sx127x_netdev.h"
-#include "include/vemac-header.h"
 
 /* For UNWD-RANGE board */
 #ifndef SX127X_PARAM_PASELECT
@@ -47,7 +46,6 @@ void *isr_thread(void *arg){
     
     static msg_t _msg_q[SX127X_LORA_MSG_QUEUE];
     msg_init_queue(_msg_q, SX127X_LORA_MSG_QUEUE);
-    int sf_old = 7;
 
     while (1) {
 
@@ -222,6 +220,7 @@ int main(void){
         switch (sf) {
             case 0:
                 count_of_message = 0;
+                break;
             case 7:
                 sf = LORA_SF7;
                 break;

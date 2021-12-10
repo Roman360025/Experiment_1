@@ -1,6 +1,6 @@
-/home/roman/RIOT/experiments/vemac-listener/bin/unwd-range-l1-r3/application_vemac-listener/main.o: \
- /home/roman/RIOT/experiments/vemac-listener/main.c \
- /home/roman/RIOT/experiments/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+/home/roman/RIOT/experiments/listener/bin/unwd-range-l1-r3/application_vemac-listener/main.o: \
+ /home/roman/RIOT/experiments/listener/main.c \
+ /home/roman/RIOT/experiments/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdio.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/_ansi.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -86,10 +86,9 @@
  /home/roman/RIOT/drivers/include/periph/gpio.h \
  /home/roman/RIOT/drivers/include/periph/spi.h \
  /home/roman/RIOT/drivers/include/periph/gpio.h \
- /home/roman/RIOT/drivers/sx127x/include/sx127x_netdev.h \
- /home/roman/RIOT/experiments/vemac-listener/include/vemac-header.h
+ /home/roman/RIOT/drivers/sx127x/include/sx127x_netdev.h
 
-/home/roman/RIOT/experiments/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiments/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdio.h:
 
@@ -262,5 +261,3 @@
 /home/roman/RIOT/drivers/include/periph/gpio.h:
 
 /home/roman/RIOT/drivers/sx127x/include/sx127x_netdev.h:
-
-/home/roman/RIOT/experiments/vemac-listener/include/vemac-header.h:
