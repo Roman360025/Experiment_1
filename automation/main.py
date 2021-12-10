@@ -14,36 +14,44 @@ while not ser_sender:
             timeout=0)
     except:
         print('Unable to connect sender')
-#
-# while not ser_receiver:
-#     try:
-#         ser_sender = serial.Serial(
-#             port='COM8',
-#             baudrate=115200,
-#             parity=serial.PARITY_NONE,
-#             stopbits=serial.STOPBITS_ONE,
-#             bytesize=serial.EIGHTBITS,
-#             timeout=0)
-#     except:
-#         print('Unable to connect receiver')
 
-print("connected to: " + ser_sender.portstr)
+while not ser_receiver:
+    try:
+        ser_receiver = serial.Serial(
+            port='COM6',
+            baudrate=115200,
+            parity=serial.PARITY_NONE,
+            stopbits=serial.STOPBITS_ONE,
+            bytesize=serial.EIGHTBITS,
+            timeout=0)
+    except:
+        print('Unable to connect receiver')
+
+print("connected to: " + ser_receiver.portstr)
 
 power = -1
 sf = 7
+reset = 0
 
 while 1:
-    line = ser_sender.read(10000000000000000000000000000000000000)
-    if line != b'':
-        print(line)
-    if 'P' in line.decode('utf-8'):
+    ser_sender.write(b'%a\n\r' % power)
+    ser_sender.write(b'%a\n\r' % sf)
+    line_send = ser_sender.read(10000000000000000000000000000000000000)
+    line_recv = ser_receiver.read(10000000000000000000000000000000000000)
+    if line_recv != b'':
+        print(line_recv)
+    if 'P' in line_send.decode('utf-8'):
         ser_sender.write(b'%a\n\r' % power)
         ser_sender.write(b'%a\n\r' % sf)
+        ser_receiver.write(b'%a\n\r' % reset)
         power += 1
-        if power == 14:
-            sf += 1
-            power = -1
 
         if power == 14 and sf == 12:
             print('ALL')
             break
+        elif power == 14:
+            ser_receiver.write(b'%a\n\r' % sf)
+            sf += 1
+            power = -1
+
+
