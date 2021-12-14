@@ -33,13 +33,15 @@ power = -1
 sf = 7
 reset = 0
 
+f = open('{}.txt'.format(sf), 'w')
+
 while 1:
     ser_sender.write(b'%a\n\r' % power)
     ser_sender.write(b'%a\n\r' % sf)
     line_send = ser_sender.read(10000000000000000000000000000000000000)
     line_recv = ser_receiver.read(10000000000000000000000000000000000000)
     if line_recv != b'':
-        print(line_recv)
+        f.write(line_recv.decode('utf-8'))
     if 'P' in line_send.decode('utf-8'):
         ser_sender.write(b'%a\n\r' % power)
         ser_sender.write(b'%a\n\r' % sf)
@@ -53,5 +55,7 @@ while 1:
             ser_receiver.write(b'%a\n\r' % sf)
             sf += 1
             power = -1
+            f.close()
+            f = open('{}.txt'.format(sf), 'w')
 
 
