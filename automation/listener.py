@@ -21,7 +21,6 @@ power = -1
 sf = 7
 reset = 0
 
-# f = open('{}.txt'.format(sf), 'w')
 
 with open('{}.txt'.format(sf), 'w') as f:
     while 1:
@@ -30,7 +29,6 @@ with open('{}.txt'.format(sf), 'w') as f:
             if line_recv != b'':
                 f.write(line_recv.decode('utf-8'))
         except:
-            f.close()
             break
 
 
