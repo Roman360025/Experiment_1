@@ -181,13 +181,15 @@ static void sx127x_handler(netdev_t *dev, netdev_event_t event, void *arg)
 
 
 
-void do_send(vemac_t *vemac, int *count)
+void do_send(vemac_t *vemac, int *count, int *power)
 {
-    uint8_t buffer[10];
+    int8_t buffer[10];
 
-    for (int i = 0; i < 10; ++i)
+    buffer[0] = 15;
+
+    for (int i = 1; i < 10; ++i)
     {   
-        buffer[i] = 0x13;
+        buffer[i] = *power;
         
     }
 
@@ -214,15 +216,19 @@ void do_send(vemac_t *vemac, int *count)
 void *slot_thread(void *arg){
        vemac_t *vemac = (vemac_t *)arg;
 
+        int power = -1;
+        int sf = 7;
 
     while (1) {
         int count = 0;
-        int power, sf;
 
-        puts("Power and SF:");
 
-        scanf("%d", &power);
-        scanf("%d", &sf);
+//        puts("Power and F:");
+
+
+
+//        scanf("%d", &power);
+//        scanf("%d", &sf);
 
 
 
@@ -261,11 +267,15 @@ void *slot_thread(void *arg){
         for (int i = 0; i < 10; ++i)
         {
             count++;
-            lptimer_sleep(1000);
-            do_send(vemac, &count);
+            lptimer_sleep(5000);
+            do_send(vemac, &count, &power);
         }
 
+        power++;
 
+        if (power == 15) {
+            scanf("Input sf: %d", &sf);
+        }
 
         
         

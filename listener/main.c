@@ -81,16 +81,27 @@ static void sx127x_handler(netdev_t *dev, netdev_event_t event, void *arg)
         case NETDEV_EVENT_RX_COMPLETE: {
             int len;
             netdev_lora_rx_info_t packet_info;
-            uint8_t message[255];
+            int8_t message[255];
     
             len = dev->driver->recv(dev, NULL, 0, &packet_info);
             if (len < 0) {
-                printf("RX: bad message, aborting\n");
+                printf("RX: bad message, aborting\r\n");
                 break;
             }
             else {
-                dev->driver->recv(dev, message, len, &packet_info);            
-                printf("Number: %d , |  SNR: %d dB\n", ++count_of_message, (int)packet_info.snr);
+                dev->driver->recv(dev, message, len, &packet_info);
+
+                if (message[0] == 15 && len == 10)
+                {
+                    if (power != message[1]) {
+                    printf("\r\n");
+                    printf("Power: %d\r\n", message[1]);
+                    power = message[1];
+                    count_of_message = 0;
+                }
+                    printf("Number: %d | RSSI: %d dBm | SNR: %d dB\r\n", ++count_of_message, packet_info.rssi, (int)packet_info.snr);
+                }
+
             }
             
 
@@ -213,7 +224,7 @@ int main(void){
     while(1){
         int sf;
 
-        puts("Power and SF:");
+//        puts("Power and SF:");
 
         scanf("%d", &sf);
 
