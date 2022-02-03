@@ -1,6 +1,6 @@
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/stdio_uart/stdio_uart.o: \
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/stdio_uart/stdio_uart.o: \
  /home/roman/RIOT/sys/stdio_uart/stdio_uart.c \
- /home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /home/roman/RIOT/sys/include/stdio_uart.h \
  /home/roman/RIOT/boards/unwd-range-l1-r3/include/board.h \
  /home/roman/RIOT/boards/common/unwd/include/board_unwd.h \
@@ -72,7 +72,7 @@
  /home/roman/RIOT/core/include/debug.h \
  /home/roman/RIOT/core/include/thread.h
 
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /home/roman/RIOT/sys/include/stdio_uart.h:
 

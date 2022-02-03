@@ -1,6 +1,6 @@
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/isrpipe/isrpipe.o: \
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/isrpipe/isrpipe.o: \
  /home/roman/RIOT/sys/isrpipe/isrpipe.c \
- /home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/errno.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/sys/errno.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/sys/reent.h \
@@ -73,7 +73,7 @@
  /home/roman/RIOT/drivers/include/periph/timer.h \
  /home/roman/RIOT/drivers/include/periph/dev_enums.h
 
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/errno.h:
 

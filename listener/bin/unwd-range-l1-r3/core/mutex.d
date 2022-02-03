@@ -1,6 +1,6 @@
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/core/mutex.o: \
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/core/mutex.o: \
  /home/roman/RIOT/core/mutex.c \
- /home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdio.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/_ansi.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -58,7 +58,7 @@
  /home/roman/RIOT/core/include/debug.h \
  /home/roman/RIOT/core/include/thread.h
 
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdio.h:
 

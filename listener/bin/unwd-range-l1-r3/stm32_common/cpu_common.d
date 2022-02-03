@@ -1,6 +1,6 @@
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/stm32_common/cpu_common.o: \
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/stm32_common/cpu_common.o: \
  /home/roman/RIOT/cpu/stm32_common/cpu_common.c \
- /home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /home/roman/RIOT/boards/unwd-range-l1-r3/include/periph_conf.h \
  /home/roman/RIOT/cpu/stm32l1/include/periph_cpu.h \
  /home/roman/RIOT/cpu/stm32_common/include/periph_cpu_common.h \
@@ -61,7 +61,7 @@
  /home/roman/RIOT/core/include/debug.h \
  /home/roman/RIOT/core/include/thread.h
 
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /home/roman/RIOT/boards/unwd-range-l1-r3/include/periph_conf.h:
 

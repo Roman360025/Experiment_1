@@ -1,6 +1,6 @@
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/boards_common_unwd/board.o: \
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/boards_common_unwd/board.o: \
  /home/roman/RIOT/boards/common/unwd/board.c \
- /home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /home/roman/RIOT/boards/unwd-range-l1-r3/include/board.h \
  /home/roman/RIOT/boards/common/unwd/include/board_unwd.h \
  /home/roman/RIOT/drivers/include/periph/gpio.h \
@@ -64,7 +64,7 @@
  /home/roman/RIOT/drivers/include/periph/pm.h \
  /home/roman/RIOT/sys/include/pm_layered.h
 
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /home/roman/RIOT/boards/unwd-range-l1-r3/include/board.h:
 

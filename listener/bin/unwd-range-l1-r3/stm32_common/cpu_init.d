@@ -1,6 +1,6 @@
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/stm32_common/cpu_init.o: \
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/stm32_common/cpu_init.o: \
  /home/roman/RIOT/cpu/stm32_common/cpu_init.c \
- /home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /home/roman/RIOT/cpu/cortexm_common/include/cpu.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdio.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/_ansi.h \
@@ -69,7 +69,7 @@
  /home/roman/RIOT/boards/unwd-range-l1-r3/include/board.h \
  /home/roman/RIOT/boards/common/unwd/include/board_unwd.h
 
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /home/roman/RIOT/cpu/cortexm_common/include/cpu.h:
 

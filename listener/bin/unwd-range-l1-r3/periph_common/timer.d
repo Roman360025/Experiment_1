@@ -1,6 +1,6 @@
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/periph_common/timer.o: \
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/periph_common/timer.o: \
  /home/roman/RIOT/drivers/periph_common/timer.c \
- /home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /home/roman/RIOT/drivers/include/periph/timer.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include-fixed/limits.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include-fixed/syslimits.h \
@@ -61,7 +61,7 @@
  /home/roman/RIOT/drivers/include/periph/dev_enums.h \
  /home/roman/RIOT/boards/unwd-range-l1-r3/include/periph_conf.h
 
-/home/roman/RIOT/apps684/vemac-listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/listener/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /home/roman/RIOT/drivers/include/periph/timer.h:
 
