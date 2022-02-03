@@ -1,6 +1,6 @@
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/cortexm_common/irq_arch.o: \
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/cortexm_common/irq_arch.o: \
  /home/roman/RIOT/cpu/cortexm_common/irq_arch.c \
- /home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include/stdint.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdint.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/machine/_default_types.h \
@@ -56,7 +56,7 @@
  /home/roman/RIOT/core/include/msg.h \
  /home/roman/RIOT/core/include/sched.h
 
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /opt/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include/stdint.h:
 

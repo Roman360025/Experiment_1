@@ -99,7 +99,7 @@ void *isr_thread(void *arg){
             dev->driver->isr(dev);
         }
         else {
-            puts("[LoRa] unexpected msg type");
+//            puts("[LoRa] unexpected msg type");
         }
     }
 }
@@ -109,71 +109,71 @@ void *isr_thread(void *arg){
 static void sx127x_handler(netdev_t *dev, netdev_event_t event, void *arg)
 {
     vemac_t *vemac = (vemac_t *)arg;
-    
+
     if (event == NETDEV_EVENT_ISR) {
         msg_t msg;
         msg.type = MSG_TYPE_ISR;
         msg.content.ptr = dev;
         if (msg_send(&msg, vemac->isr_pid) <= 0) {
-            puts("gnrc_netdev: possibly lost interrupt.");
+//            puts("gnrc_netdev: possibly lost interrupt.");
         }
         return;
     }
-    
+
     switch (event) {
         case NETDEV_EVENT_RX_COMPLETE: {
             int len;
             netdev_lora_rx_info_t packet_info;
             uint8_t message[255];
-    
+
             len = vemac->device->driver->recv(dev, NULL, 0, &packet_info);
             if (len < 0) {
-                printf("RX: bad message, aborting\n");
+//                printf("RX: bad message, aborting\n");
                 break;
             }
-            
+
             vemac->device->driver->recv(dev, message, len, &packet_info);
-            printf("RX: %d bytes, | RSSI: %d dBm | SNR: %d dB\n", (int)len, packet_info.rssi, (int)packet_info.snr);
+//            printf("RX: %d bytes, | RSSI: %d dBm | SNR: %d dB\n", (int)len, packet_info.rssi, (int)packet_info.snr);
             /* TODO: здесь вызываем обработчик пакета (точнее, кидаем сообщение в другой поток?) */
             break;
         }
         case NETDEV_EVENT_CRC_ERROR:
-            puts("[LoRa] RX CRC failed");
+//            puts("[LoRa] RX CRC failed");
             break;
 
         case NETDEV_EVENT_TX_COMPLETE:
-            puts("[LoRa] transmission done.");
-            
+            printf("[LoRa] transmission done.\r\n");
+
             /* TODO: переключаемся в режим приема правильно */
             uint8_t state = NETOPT_STATE_IDLE;
             vemac->device->driver->set(dev, NETOPT_STATE, &state, sizeof(uint8_t));
-            
+
             break;
 
         case NETDEV_EVENT_RX_TIMEOUT:
-            puts("[LoRa] RX timeout");
+//            puts("[LoRa] RX timeout");
             break;
 
         case NETDEV_EVENT_TX_TIMEOUT:
             /* this should not happen, re-init SX127X here */
-            puts("[LoRa] TX timeout");
+//            puts("[LoRa] TX timeout");
             vemac->device->driver->init(dev);
             break;
-            
+
         case NETDEV_EVENT_CAD_DONE:
-            puts("[LoRa] CAD done\n");
+//            puts("[LoRa] CAD done\n");
             break;
-            
+
         case NETDEV_EVENT_CAD_DETECTED:
-            puts("[LoRa] CAD detected\n");
+//            puts("[LoRa] CAD detected\n");
             break;
-            
+
         case NETDEV_EVENT_VALID_HEADER:
-            puts("[LoRa] header received, switch to RX state");
+//            puts("[LoRa] header received, switch to RX state");
             break;
 
         default:
-            printf("[LoRa] received event #%d\n", (int) event);
+//            printf("[LoRa] received event #%d\n", (int) event);
             break;
     }
 }
@@ -181,29 +181,40 @@ static void sx127x_handler(netdev_t *dev, netdev_event_t event, void *arg)
 
 
 
-void do_send(vemac_t *vemac, int *count, int *power)
+void do_send(vemac_t *vemac, int *power, int *sf)
 {
     int8_t buffer[10];
 
     buffer[0] = 15;
+    buffer[1] = 112;
 
-    for (int i = 1; i < 10; ++i)
-    {   
-        buffer[i] = *power;
-        
+    if (*power != 15) {
+        for (int i = 2; i < 10; ++i)
+        {
+            buffer[i] = *power;
+        }
     }
+    else {
+        buffer[2] = 15;
+        for (int i = 3; i < 10; ++i)
+        {
+            buffer[i] = *sf;
+        }
+    }
+
+
 
     iolist_t data = {
     .iol_base = buffer,
     .iol_len = 10,
     };
-            
+
     if (vemac->device->driver->send(vemac->device, &data) < 0) {
-        puts("[LoRa] cannot send, device busy");
+//        puts("[LoRa] cannot send, device busy");
     }
     else
     {
-        printf("Send: %d\n", (* count));
+//        printf("Send: %d\n", (* count));
 
         // for (int i = 0; i < 10; ++i)
         // {
@@ -220,21 +231,43 @@ void *slot_thread(void *arg){
         int sf = 7;
 
     while (1) {
-        int count = 0;
+//        int count = 0;
+
+        vemac->device->driver->set(vemac->device, NETOPT_TX_POWER, &power, sizeof(int16_t));
+
+        // puts("Starting to send messages");
 
 
-//        puts("Power and F:");
+        for (int i = 0; i < 10; ++i)
+        {
+            lptimer_sleep(5000);
+            do_send(vemac, &power, &sf);
+        }
+
+        power++;
 
 
+        if (power == 15) {
+            if (sf == 12) {
 
-//        scanf("%d", &power);
-//        scanf("%d", &sf);
+                sf = 7;
+                }
+            else {
+                sf++;
+            }
+
+            power = 15;
+            do_send(vemac, &power, &sf);
+            lptimer_sleep(5000);
+            do_send(vemac, &power, &sf);
+            lptimer_sleep(5000);
+            do_send(vemac, &power, &sf);
+            lptimer_sleep(5000);
+
+            power = -1;
 
 
-
-
-
-        switch (sf) {
+            switch (sf) {
             case 7:
                 sf = LORA_SF7;
                 break;
@@ -253,39 +286,20 @@ void *slot_thread(void *arg){
             case 12:
                 sf = LORA_SF12;
                 break;
-        }
+                }
 
-        printf("Get %d", power+1);
-        printf("get %d", sf+2);
-
-        vemac->device->driver->set(vemac->device, NETOPT_TX_POWER, &power, sizeof(int16_t));
         vemac->device->driver->set(vemac->device, NETOPT_SPREADING_FACTOR, &sf, sizeof(uint8_t));
 
-        // puts("Starting to send messages");
 
 
-        for (int i = 0; i < 10; ++i)
-        {
-            count++;
-            lptimer_sleep(5000);
-            do_send(vemac, &count, &power);
         }
-
-        power++;
-
-        if (power == 15) {
-            scanf("Input sf: %d", &sf);
         }
-
-        
-        
     }
-}
 
 int vemac_init(vemac_t *vemac, netdev_t *device){
     device->driver = &sx127x_driver;
     vemac->device = device;
-    
+
     vemac->isr_pid = thread_create(vemac->isr_stack, sizeof(vemac->isr_stack), THREAD_PRIORITY_MAIN - 1,
                               THREAD_CREATE_STACKTEST, isr_thread, vemac,
                               "SX127x handler thread");
@@ -294,7 +308,7 @@ int vemac_init(vemac_t *vemac, netdev_t *device){
         puts("ls_init: creation of SX127X ISR thread failed");
         return false;
     }
-    
+
     vemac->slot_pid = thread_create(vemac->slot_stack, sizeof(vemac->slot_stack), THREAD_PRIORITY_MAIN - 2,
                               THREAD_CREATE_STACKTEST, slot_thread, vemac,
                               "VeMAC uplink thread");
@@ -303,23 +317,23 @@ int vemac_init(vemac_t *vemac, netdev_t *device){
         puts("ls_init: creation of SX127X ISR thread failed");
         return false;
     }
-    
+
     if(vemac->device->driver->init(vemac->device) < 0){
         puts("Netdev driver initialisation failed");
     }
-    
+
     vemac->device->event_callback = sx127x_handler;
     vemac->device->event_callback_arg = vemac;
-    
+
     /* Конфигурируем трансивер, выставляем значимые параметры */
     const netopt_enable_t enable = true;
     const netopt_enable_t disable = false;
-    
+
     puts("[LoRa] reconfigure transceiver\n");
     /* Configure to sleep */
     uint8_t state = NETOPT_STATE_SLEEP;
     vemac->device->driver->set(vemac->device, NETOPT_STATE, &state, sizeof(uint8_t));
-    
+
     uint16_t modem = NETDEV_TYPE_LORA;
     vemac->device->driver->set(vemac->device, NETOPT_DEVICE_TYPE, &modem, sizeof(uint16_t));
 
@@ -329,7 +343,7 @@ int vemac_init(vemac_t *vemac, netdev_t *device){
     vemac->device->driver->set(vemac->device, NETOPT_BANDWIDTH, &bw, sizeof(uint8_t));
     uint8_t cr = LORA_CR_4_5;
     vemac->device->driver->set(vemac->device, NETOPT_CODING_RATE, &cr, sizeof(uint8_t));
-    
+
     uint8_t hop_period = 0;
     vemac->device->driver->set(vemac->device, NETOPT_CHANNEL_HOP_PERIOD, &hop_period, sizeof(uint8_t));
     vemac->device->driver->set(vemac->device, NETOPT_CHANNEL_HOP, &disable, sizeof(disable));
@@ -337,25 +351,25 @@ int vemac_init(vemac_t *vemac, netdev_t *device){
     vemac->device->driver->set(vemac->device, NETOPT_INTEGRITY_CHECK, &disable, sizeof(enable));
     vemac->device->driver->set(vemac->device, NETOPT_FIXED_HEADER, &disable, sizeof(disable));
     vemac->device->driver->set(vemac->device, NETOPT_IQ_INVERT, &disable, sizeof(disable));
-    
+
     int16_t power = -1;
     vemac->device->driver->set(vemac->device, NETOPT_TX_POWER, &power, sizeof(int16_t));
-    
+
     uint16_t preamble_len = 8;
     vemac->device->driver->set(vemac->device, NETOPT_PREAMBLE_LENGTH, &preamble_len, sizeof(uint16_t));
-    
+
     uint32_t tx_timeout = 30000;
     vemac->device->driver->set(vemac->device, NETOPT_TX_TIMEOUT, &tx_timeout, sizeof(uint32_t));
-    
+
     uint32_t rx_timeout = 0;
     vemac->device->driver->set(vemac->device, NETOPT_RX_TIMEOUT, &rx_timeout, sizeof(uint32_t));
 
     uint32_t frequency = 869000000;
     vemac->device->driver->set(vemac->device, NETOPT_CHANNEL_FREQUENCY, &frequency, sizeof(uint32_t));
-    
+
     state = NETOPT_STATE_IDLE;
     vemac->device->driver->set(vemac->device, NETOPT_STATE, &state, sizeof(uint8_t));
-    
+
 
     return 0;
 }
@@ -365,10 +379,6 @@ vemac_t vemac;
 int main(void){
     sx127x.params = sx127x_params;
     vemac_init(&vemac, (netdev_t*) &sx127x);
-
-
-    
-
     
     }
  

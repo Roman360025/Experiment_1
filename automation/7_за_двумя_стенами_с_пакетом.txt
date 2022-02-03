@@ -1,0 +1,197 @@
+main(): This is RIOT! (Version: 2019.01.UNWDS)
+SX1276/77/78/79 transceiver detected
+[LoRa] reconfigure transceiver
+
+
+Power: -1
+Number: 1 | RSSI: -126 dBm | SNR: -8 dB
+Number: 2 | RSSI: -125 dBm | SNR: -5 dB
+Number: 3 | RSSI: -126 dBm | SNR: -7 dB
+Number: 4 | RSSI: -125 dBm | SNR: -7 dB
+Number: 5 | RSSI: -125 dBm | SNR: -5 dB
+Number: 6 | RSSI: -125 dBm | SNR: -6 dB
+Number: 7 | RSSI: -124 dBm | SNR: -5 dB
+Number: 8 | RSSI: -124 dBm | SNR: -4 dB
+Number: 9 | RSSI: -122 dBm | SNR: -4 dB
+
+Power: 0
+Number: 1 | RSSI: -125 dBm | SNR: -5 dB
+Number: 2 | RSSI: -123 dBm | SNR: -3 dB
+Number: 3 | RSSI: -123 dBm | SNR: -4 dB
+Number: 4 | RSSI: -120 dBm | SNR: -2 dB
+Number: 5 | RSSI: -124 dBm | SNR: -4 dB
+Number: 6 | RSSI: -121 dBm | SNR: -3 dB
+Number: 7 | RSSI: -124 dBm | SNR: -4 dB
+Number: 8 | RSSI: -125 dBm | SNR: -6 dB
+Number: 9 | RSSI: -124 dBm | SNR: -4 dB
+Number: 10 | RSSI: -120 dBm | SNR: -1 dB
+
+Power: 1
+Number: 1 | RSSI: -117 dBm | SNR: 0 dB
+Number: 2 | RSSI: -119 dBm | SNR: -1 dB
+Number: 3 | RSSI: -119 dBm | SNR: -1 dB
+Number: 4 | RSSI: -122 dBm | SNR: -2 dB
+Number: 5 | RSSI: -120 dBm | SNR: -1 dB
+Number: 6 | RSSI: -120 dBm | SNR: -1 dB
+Number: 7 | RSSI: -121 dBm | SNR: -3 dB
+Number: 8 | RSSI: -120 dBm | SNR: -1 dB
+Number: 9 | RSSI: -120 dBm | SNR: -2 dB
+Number: 10 | RSSI: -119 dBm | SNR: -1 dB
+
+Power: 2
+Number: 1 | RSSI: -118 dBm | SNR: 0 dB
+Number: 2 | RSSI: -117 dBm | SNR: 0 dB
+Number: 3 | RSSI: -118 dBm | SNR: -1 dB
+Number: 4 | RSSI: -117 dBm | SNR: 0 dB
+Number: 5 | RSSI: -119 dBm | SNR: -2 dB
+Number: 6 | RSSI: -120 dBm | SNR: -1 dB
+Number: 7 | RSSI: -120 dBm | SNR: -1 dB
+Number: 8 | RSSI: -118 dBm | SNR: -1 dB
+Number: 9 | RSSI: -120 dBm | SNR: -1 dB
+Number: 10 | RSSI: -116 dBm | SNR: 0 dB
+
+Power: 3
+Number: 1 | RSSI: -117 dBm | SNR: -1 dB
+Number: 2 | RSSI: -117 dBm | SNR: 0 dB
+Number: 3 | RSSI: -117 dBm | SNR: 0 dB
+Number: 4 | RSSI: -118 dBm | SNR: 0 dB
+Number: 5 | RSSI: -118 dBm | SNR: 0 dB
+Number: 6 | RSSI: -118 dBm | SNR: 0 dB
+Number: 7 | RSSI: -116 dBm | SNR: 1 dB
+Number: 8 | RSSI: -118 dBm | SNR: 0 dB
+Number: 9 | RSSI: -117 dBm | SNR: 0 dB
+Number: 10 | RSSI: -117 dBm | SNR: 1 dB
+
+Power: 4
+Number: 1 | RSSI: -117 dBm | SNR: 1 dB
+Number: 2 | RSSI: -117 dBm | SNR: 1 dB
+Number: 3 | RSSI: -115 dBm | SNR: 1 dB
+Number: 4 | RSSI: -116 dBm | SNR: 0 dB
+Number: 5 | RSSI: -116 dBm | SNR: 1 dB
+Number: 6 | RSSI: -116 dBm | SNR: 1 dB
+Number: 7 | RSSI: -116 dBm | SNR: 0 dB
+Number: 8 | RSSI: -116 dBm | SNR: 1 dB
+Number: 9 | RSSI: -117 dBm | SNR: 1 dB
+Number: 10 | RSSI: -116 dBm | SNR: 2 dB
+
+Power: 5
+Number: 1 | RSSI: -115 dBm | SNR: 2 dB
+Number: 2 | RSSI: -117 dBm | SNR: 2 dB
+Number: 3 | RSSI: -116 dBm | SNR: 2 dB
+Number: 4 | RSSI: -115 dBm | SNR: 1 dB
+Number: 5 | RSSI: -115 dBm | SNR: 0 dB
+Number: 6 | RSSI: -116 dBm | SNR: 1 dB
+Number: 7 | RSSI: -116 dBm | SNR: 1 dB
+Number: 8 | RSSI: -117 dBm | SNR: 1 dB
+Number: 9 | RSSI: -116 dBm | SNR: 3 dB
+
+Power: 6
+Number: 1 | RSSI: -116 dBm | SNR: 3 dB
+Number: 2 | RSSI: -115 dBm | SNR: 3 dB
+Number: 3 | RSSI: -115 dBm | SNR: 2 dB
+Number: 4 | RSSI: -115 dBm | SNR: 3 dB
+Number: 5 | RSSI: -115 dBm | SNR: 2 dB
+Number: 6 | RSSI: -113 dBm | SNR: 1 dB
+Number: 7 | RSSI: -115 dBm | SNR: 1 dB
+Number: 8 | RSSI: -115 dBm | SNR: 1 dB
+Number: 9 | RSSI: -115 dBm | SNR: 1 dB
+Number: 10 | RSSI: -113 dBm | SNR: 1 dB
+
+Power: 7
+Number: 1 | RSSI: -114 dBm | SNR: 2 dB
+Number: 2 | RSSI: -113 dBm | SNR: 1 dB
+Number: 3 | RSSI: -114 dBm | SNR: 2 dB
+Number: 4 | RSSI: -113 dBm | SNR: 1 dB
+Number: 5 | RSSI: -114 dBm | SNR: 2 dB
+Number: 6 | RSSI: -115 dBm | SNR: 2 dB
+Number: 7 | RSSI: -113 dBm | SNR: 2 dB
+Number: 8 | RSSI: -113 dBm | SNR: 1 dB
+Number: 9 | RSSI: -114 dBm | SNR: 2 dB
+Number: 10 | RSSI: -113 dBm | SNR: 2 dB
+
+Power: 8
+Number: 1 | RSSI: -113 dBm | SNR: 3 dB
+Number: 2 | RSSI: -113 dBm | SNR: 2 dB
+Number: 3 | RSSI: -113 dBm | SNR: 2 dB
+Number: 4 | RSSI: -113 dBm | SNR: 2 dB
+Number: 5 | RSSI: -112 dBm | SNR: 1 dB
+Number: 6 | RSSI: -114 dBm | SNR: 2 dB
+Number: 7 | RSSI: -113 dBm | SNR: 2 dB
+Number: 8 | RSSI: -112 dBm | SNR: 2 dB
+Number: 9 | RSSI: -112 dBm | SNR: 2 dB
+Number: 10 | RSSI: -112 dBm | SNR: 3 dB
+
+Power: 9
+Number: 1 | RSSI: -113 dBm | SNR: 3 dB
+Number: 2 | RSSI: -112 dBm | SNR: 3 dB
+Number: 3 | RSSI: -112 dBm | SNR: 3 dB
+Number: 4 | RSSI: -112 dBm | SNR: 3 dB
+Number: 5 | RSSI: -111 dBm | SNR: 2 dB
+Number: 6 | RSSI: -111 dBm | SNR: 3 dB
+Number: 7 | RSSI: -112 dBm | SNR: 3 dB
+Number: 8 | RSSI: -113 dBm | SNR: 3 dB
+Number: 9 | RSSI: -111 dBm | SNR: 3 dB
+Number: 10 | RSSI: -110 dBm | SNR: 4 dB
+
+Power: 10
+Number: 1 | RSSI: -110 dBm | SNR: 3 dB
+Number: 2 | RSSI: -110 dBm | SNR: 4 dB
+Number: 3 | RSSI: -112 dBm | SNR: 4 dB
+Number: 4 | RSSI: -110 dBm | SNR: 3 dB
+Number: 5 | RSSI: -111 dBm | SNR: 4 dB
+Number: 6 | RSSI: -111 dBm | SNR: 4 dB
+Number: 7 | RSSI: -112 dBm | SNR: 4 dB
+Number: 8 | RSSI: -110 dBm | SNR: 3 dB
+Number: 9 | RSSI: -109 dBm | SNR: 4 dB
+Number: 10 | RSSI: -109 dBm | SNR: 4 dB
+
+Power: 11
+Number: 1 | RSSI: -110 dBm | SNR: 4 dB
+Number: 2 | RSSI: -110 dBm | SNR: 5 dB
+Number: 3 | RSSI: -110 dBm | SNR: 4 dB
+Number: 4 | RSSI: -110 dBm | SNR: 4 dB
+Number: 5 | RSSI: -111 dBm | SNR: 4 dB
+Number: 6 | RSSI: -110 dBm | SNR: 5 dB
+Number: 7 | RSSI: -111 dBm | SNR: 5 dB
+Number: 8 | RSSI: -109 dBm | SNR: 5 dB
+Number: 9 | RSSI: -109 dBm | SNR: 4 dB
+Number: 10 | RSSI: -109 dBm | SNR: 5 dB
+
+Power: 12
+Number: 1 | RSSI: -109 dBm | SNR: 4 dB
+Number: 2 | RSSI: -110 dBm | SNR: 4 dB
+Number: 3 | RSSI: -108 dBm | SNR: 4 dB
+Number: 4 | RSSI: -110 dBm | SNR: 4 dB
+Number: 5 | RSSI: -110 dBm | SNR: 4 dB
+Number: 6 | RSSI: -108 dBm | SNR: 4 dB
+Number: 7 | RSSI: -110 dBm | SNR: 5 dB
+Number: 8 | RSSI: -108 dBm | SNR: 4 dB
+Number: 9 | RSSI: -109 dBm | SNR: 4 dB
+Number: 10 | RSSI: -110 dBm | SNR: 5 dB
+
+Power: 13
+Number: 1 | RSSI: -110 dBm | SNR: 5 dB
+Number: 2 | RSSI: -108 dBm | SNR: 5 dB
+Number: 3 | RSSI: -109 dBm | SNR: 5 dB
+Number: 4 | RSSI: -110 dBm | SNR: 5 dB
+Number: 5 | RSSI: -109 dBm | SNR: 4 dB
+Number: 6 | RSSI: -108 dBm | SNR: 5 dB
+Number: 7 | RSSI: -108 dBm | SNR: 4 dB
+Number: 8 | RSSI: -108 dBm | SNR: 4 dB
+Number: 9 | RSSI: -109 dBm | SNR: 5 dB
+Number: 10 | RSSI: -106 dBm | SNR: 5 dB
+
+Power: 14
+Number: 1 | RSSI: -106 dBm | SNR: 5 dB
+Number: 2 | RSSI: -106 dBm | SNR: 4 dB
+Number: 3 | RSSI: -109 dBm | SNR: 5 dB
+Number: 4 | RSSI: -109 dBm | SNR: 5 dB
+Number: 5 | RSSI: -109 dBm | SNR: 5 dB
+Number: 6 | RSSI: -108 dBm | SNR: 4 dB
+Number: 7 | RSSI: -106 dBm | SNR: 4 dB
+Number: 8 | RSSI: -109 dBm | SNR: 5 dB
+Number: 9 | RSSI: -109 dBm | SNR: 5 dB
+Number: 10 | RSSI: -106 dBm | SNR: 5 dB
+RX: bad message, aborting
+RX: bad message, aborting
+RX: bad message, aborting

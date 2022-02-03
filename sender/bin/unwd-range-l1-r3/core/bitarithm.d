@@ -1,6 +1,6 @@
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/core/bitarithm.o: \
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/core/bitarithm.o: \
  /home/roman/RIOT/core/bitarithm.c \
- /home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdio.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/_ansi.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -38,7 +38,7 @@
  /home/roman/RIOT/cpu/cortexm_common/include/vendor/cmsis_gcc.h \
  /home/roman/RIOT/cpu/cortexm_common/include/vendor/mpu_armv7.h
 
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdio.h:
 

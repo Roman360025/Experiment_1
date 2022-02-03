@@ -1,6 +1,6 @@
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/periph_common/pm.o: \
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/periph_common/pm.o: \
  /home/roman/RIOT/drivers/periph_common/pm.c \
- /home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /home/roman/RIOT/core/include/irq.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include/stdbool.h \
  /home/roman/RIOT/drivers/include/periph/pm.h \
@@ -62,7 +62,7 @@
  /home/roman/RIOT/core/include/debug.h \
  /home/roman/RIOT/core/include/thread.h
 
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /home/roman/RIOT/core/include/irq.h:
 

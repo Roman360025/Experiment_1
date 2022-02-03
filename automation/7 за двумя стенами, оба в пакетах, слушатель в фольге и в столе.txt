@@ -1,0 +1,133 @@
+main(): This is RIOT! (Version: 2019.01.UNWDS)
+SX1276/77/78/79 transceiver detected
+[LoRa] reconfigure transceiver
+
+RX: bad message, aborting
+
+RX: bad message, aborting
+
+
+
+Power: 5
+
+Number: 1 | RSSI: -129 dBm | SNR: -8 dB
+
+
+
+Power: 6
+
+Number: 1 | RSSI: -129 dBm | SNR: -9 dB
+
+
+Power: 7
+
+Number: 1 | RSSI: -128 dBm | SNR: -8 dB
+
+
+
+Power: 8
+
+Number: 1 | RSSI: -126 dBm | SNR: -7 dB
+
+Number: 2 | RSSI: -128 dBm | SNR: -7 dB
+
+Number: 3 | RSSI: -127 dBm | SNR: -8 dB
+
+Number: 4 | RSSI: -129 dBm | SNR: -8 dB
+
+Number: 5 | RSSI: -128 dBm | SNR: -8 dB
+
+
+
+Power: 9
+
+Number: 1 | RSSI: -125 dBm | SNR: -6 dB
+
+Number: 2 | RSSI: -125 dBm | SNR: -6 dB
+
+Number: 3 | RSSI: -125 dBm | SNR: -5 dB
+
+Number: 4 | RSSI: -121 dBm | SNR: -3 dB
+
+
+
+Power: 10
+
+Number: 1 | RSSI: -123 dBm | SNR: -4 dB
+
+Number: 2 | RSSI: -122 dBm | SNR: -3 dB
+
+Number: 3 | RSSI: -124 dBm | SNR: -4 dB
+
+Number: 4 | RSSI: -124 dBm | SNR: -5 dB
+
+
+
+Power: 11
+
+Number: 1 | RSSI: -123 dBm | SNR: -4 dB
+
+Number: 2 | RSSI: -123 dBm | SNR: -3 dB
+
+Number: 3 | RSSI: -123 dBm | SNR: -3 dB
+
+Number: 4 | RSSI: -120 dBm | SNR: -2 dB
+
+Number: 5 | RSSI: -122 dBm | SNR: -3 dB
+
+Number: 6 | RSSI: -124 dBm | SNR: -5 dB
+
+Number: 7 | RSSI: -126 dBm | SNR: -6 dB
+
+Number: 8 | RSSI: -125 dBm | SNR: -6 dB
+
+
+
+Power: 12
+
+Number: 1 | RSSI: -119 dBm | SNR: -1 dB
+
+Number: 2 | RSSI: -119 dBm | SNR: -1 dB
+
+Number: 3 | RSSI: -122 dBm | SNR: -3 dB
+
+Number: 4 | RSSI: -123 dBm | SNR: -4 dB
+
+Number: 5 | RSSI: -124 dBm | SNR: -4 dB
+
+Number: 6 | RSSI: -121 dBm | SNR: -3 dB
+
+
+
+Power: 13
+
+Number: 1 | RSSI: -123 dBm | SNR: -3 dB
+
+Number: 2 | RSSI: -121 dBm | SNR: -2 dB
+
+Number: 3 | RSSI: -121 dBm | SNR: -2 dB
+
+Number: 4 | RSSI: -120 dBm | SNR: -1 dB
+
+RX: bad message, aborting
+
+Number: 5 | RSSI: -119 dBm | SNR: -1 dB
+
+Number: 6 | RSSI: -121 dBm | SNR: -2 dB
+
+Number: 7 | RSSI: -120 dBm | SNR: -2 dB
+
+Number: 8 | RSSI: -123 dBm | SNR: -4 dB
+
+
+
+Power: 14
+
+Number: 1 | RSSI: -122 dBm | SNR: -3 dB
+
+Number: 2 | RSSI: -117 dBm | SNR: 0 dB
+
+Number: 3 | RSSI: -124 dBm | SNR: -4 dB
+
+Number: 4 | RSSI: -124 dBm | SNR: -4 dB
+

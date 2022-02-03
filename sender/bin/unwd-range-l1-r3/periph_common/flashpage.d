@@ -1,6 +1,6 @@
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/periph_common/flashpage.o: \
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/periph_common/flashpage.o: \
  /home/roman/RIOT/drivers/periph_common/flashpage.c \
- /home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/string.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/_ansi.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -61,7 +61,7 @@
  /home/roman/RIOT/cpu/stm32l1/include/periph_cpu.h \
  /home/roman/RIOT/cpu/stm32_common/include/periph_cpu_common.h
 
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/string.h:
 

@@ -1,6 +1,6 @@
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/crypto/ciphers.o: \
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/crypto/ciphers.o: \
  /home/roman/RIOT/sys/crypto/ciphers.c \
- /home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/string.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/_ansi.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/newlib-nano/newlib.h \
@@ -32,7 +32,7 @@
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/stdint.h \
  /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/sys/_intsup.h
 
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /opt/gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include/string.h:
 

@@ -1,6 +1,6 @@
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/lptimer/lptimer.o: \
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/lptimer/lptimer.o: \
  /home/roman/RIOT/sys/lptimer/lptimer.c \
- /home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
+ /home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h \
  /home/roman/RIOT/core/include/assert.h \
  /home/roman/RIOT/core/include/panic.h \
  /home/roman/RIOT/core/include/kernel_defines.h \
@@ -74,7 +74,7 @@
  /home/roman/RIOT/core/include/debug.h \
  /home/roman/RIOT/core/include/thread.h
 
-/home/roman/RIOT/experiments/vemac-main/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
+/home/roman/RIOT/experiment_1/sender/bin/unwd-range-l1-r3/riotbuild/riotbuild.h:
 
 /home/roman/RIOT/core/include/assert.h:
 
