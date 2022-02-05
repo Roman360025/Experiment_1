@@ -18,7 +18,9 @@
 #define SX127X_STACKSIZE        (2*THREAD_STACKSIZE_DEFAULT)
 #define MSG_TYPE_ISR            (0x3456)
 static char isr_stack[SX127X_STACKSIZE];
+static char input_stack[SX127X_STACKSIZE];
 static kernel_pid_t isr_pid;
+static kernel_pid_t input_pid;
 
 static sx127x_params_t sx127x_params = {
     .nss_pin = SX127X_SPI_NSS,
@@ -163,6 +165,17 @@ static void sx127x_handler(netdev_t *dev, netdev_event_t event, void *arg)
     }
 }
 
+void *input_thread(void *arg) {
+    (void)arg;
+
+    while (1)
+    {
+        scanf("%d", &sf);
+        flag_sf = true;
+    }
+
+}
+
 int main(void){
     /* Создаем netdev со всей его "обвязкой" */
     sx127x.params = sx127x_params;
@@ -173,6 +186,10 @@ int main(void){
     isr_pid = thread_create(isr_stack, sizeof(isr_stack), THREAD_PRIORITY_MAIN - 1,
                               THREAD_CREATE_STACKTEST, isr_thread, NULL,
                               "SX127x handler thread");
+
+    input_pid = thread_create(input_stack, sizeof(input_stack), THREAD_PRIORITY_MAIN - 2,
+                              THREAD_CREATE_STACKTEST, input_thread, NULL,
+                              "Input SF thread");
 
     if (isr_pid <= KERNEL_PID_UNDEF) {
         puts("ls_init: creation of SX127X ISR thread failed");
