@@ -42,6 +42,7 @@ static sx127x_t sx127x;
 int sf = 7;
 volatile int count_of_message = 0;
 volatile int power = 0;
+volatile int power_received = 25;
 volatile bool flag_sf = false;
 
 void *isr_thread(void *arg){
@@ -84,6 +85,7 @@ static void sx127x_handler(netdev_t *dev, netdev_event_t event, void *arg)
         case NETDEV_EVENT_RX_COMPLETE: {
 
             int len;
+
             netdev_lora_rx_info_t packet_info;
             int8_t message[255];
 
@@ -97,30 +99,47 @@ static void sx127x_handler(netdev_t *dev, netdev_event_t event, void *arg)
 
                 if (message[0] == 15 && message[1] == 112 && len == 10)
                 {
-                    if (power != message[2] && message[2] != 15) {
-                    printf("\r\n");
-                    printf("Power: %d\r\n", message[2]);
-                    power = message[2];
-                    count_of_message = 0;
-                }
+                    if (message[2] == 15)
+                    {
+                        sf = message[3];
+                        flag_sf = true;
+                    } else
+                    {
 
-                printf("Number: %d | RSSI: %d dBm | SNR: %d dB\r\n", ++count_of_message, packet_info.rssi, (int)packet_info.snr);
-
-                if (message[2] == 15)
-                {
-                    sf = message[3];
-                    flag_sf = true;
-
-                }
+                        if (message[2] == message[3])
+                        {
+                            power_received = message[2];
+                        } else if (message[3] == message[4])
+                        {
+                            power_received = message[3];
+                        } else if (message[4] == message[5])
+                        {
+                            power_received = message[4];
+                        } else if (message[5] == message[6])
+                        {
+                            power_received = message[5];
+                        } else if (message[6] == message[7])
+                        {
+                            power_received = message[6];
+                        } else if (message[7] == message[8])
+                        {
+                            power_received = message[7];
+                        }   else if (message[8] == message[9])
+                        {
+                            power_received = message[8];
+                        }
+                        if (power != power_received && message[2] != 15) {
+                            printf("\r\n");
+                            printf("Power: %d\r\n", power_received);
+                            power = power_received;
+                            count_of_message = 0;
+                            }
+                        printf("Number: %d | RSSI: %d dBm | SNR: %d dB\r\n", ++count_of_message, packet_info.rssi, (int)packet_info.snr);
+                    }
 
                 }
 
             }
-
-
-
-            // dev->driver->recv(dev, message, len, &packet_info);
-            // printf("RX: %d bytes, | RSSI: %d dBm | SNR: %d dB\n", (int)len, packet_info.rssi, (int)packet_info.snr);
 
             break;
         }
