@@ -245,7 +245,7 @@ int main(void){
     device->driver->set(device, NETOPT_CHANNEL_HOP_PERIOD, &hop_period, sizeof(uint8_t));
     device->driver->set(device, NETOPT_CHANNEL_HOP, &disable, sizeof(disable));
     device->driver->set(device, NETOPT_SINGLE_RECEIVE, &disable, sizeof(disable));
-    device->driver->set(device, NETOPT_INTEGRITY_CHECK, &disable, sizeof(enable));
+    device->driver->set(device, NETOPT_INTEGRITY_CHECK, &enable, sizeof(enable));
     device->driver->set(device, NETOPT_FIXED_HEADER, &disable, sizeof(disable));
     device->driver->set(device, NETOPT_IQ_INVERT, &disable, sizeof(disable));
 
